@@ -181,11 +181,13 @@ main {
 }
 .review {
   background: var(--clr-white);
-  padding: 1.5rem 2rem;
+  padding: 45%;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 .review:hover {
   box-shadow: var(--dark-shadow);
@@ -198,7 +200,7 @@ main {
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
-#person-img {
+.person-img {
   width: 100%;
   display: block;
   height: 100%;
@@ -232,16 +234,16 @@ main {
   right: -0.5rem;
   border-radius: 50%;
 }
-#author {
+.author {
   margin-bottom: 0.25rem;
 }
-#job {
+.job {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   color: var(--clr-primary-5);
   font-size: 0.85rem;
 }
-#info {
+.info {
   margin-bottom: 0.75rem;
 }
 .prev-btn,
@@ -269,8 +271,52 @@ main {
   border-color: var(--clr-primary-5);
   cursor: pointer;
   font-size: 16px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%,0);
 }
 .random-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
+}
+
+
+
+/* styles for testing */
+.be_absolute {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s ease;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+}
+
+/* div#two {
+  transform: translate(100%, -50%);
+}
+
+div#three {
+  transform: translate(100%, -50%);
+}
+
+div#four {
+  transform: translate(100%, -50%);
+} */
+
+.hide {
+  transform: translate(100%, -50%) !important;
+  transition: all 1s ease;
+}
+
+.reverse_hide {
+  transform: translate(-200%, -50%) !important;
+  transition: all 1s ease;
 }
