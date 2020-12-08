@@ -130,6 +130,9 @@ p {
 }
 /*  global classes */
 
+*:focus {
+    outline: none;
+}
 /* section */
 .section {
   padding: 5rem 0;

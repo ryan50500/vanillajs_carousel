@@ -68,3 +68,29 @@ function showPerson(person) {
     job.textContent = item.job;
     info.textContent = item.text;
 }
+
+// show next person
+nextBtn.addEventListener('click', function(){
+    currentItem++;
+    if(currentItem > reviews.length -1) {
+        currentItem = 0;
+    }
+    showPerson(currentItem);
+})
+
+// show previous person
+prevBtn.addEventListener('click', function(){
+    currentItem--;
+    if(currentItem < 0) {
+        currentItem = reviews.length -1;
+    }
+    showPerson(currentItem);
+})
+
+// random reviewer
+randomBtn.addEventListener('click', function(){
+    const numbers = [0, 1, 2, 3]
+    const randomNumber = Math.floor(Math.random() * numbers.length);
+    console.log(randomNumber);
+    showPerson(randomNumber);
+})
