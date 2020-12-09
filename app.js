@@ -56,8 +56,6 @@ const three = document.getElementById('three');
 const four = document.getElementById('four');
 
 
-
-
 one.innerHTML = 
 `<div class="img-container">
 <img src="${reviews[0].img}" class="person-img" alt="" />
@@ -105,12 +103,35 @@ ${reviews[3].text}
 
 window.addEventListener("DOMContentLoaded", function () {
 
-  let count = 0
+  count = 0
+  console.log(count);
 
-nextBtn.addEventListener('click', function(){
-  count++
+  const eachPerson = document.querySelectorAll('.be_absolute');
+  const track = document.querySelector('.track');
+
+
+nextBtn.addEventListener('click', function(){ 
+    if (count <= 0 ) {
+      track.style.transform = "translate(-25%, -50%)";
+      count++
+    }
+    else if (count <= 1 ) {
+      track.style.transform = "translate(-50%, -50%)";
+      count++
+    }
+    else if (count <= 2 ) {
+      track.style.transform = "translate(-75%, -50%)";
+      count++
+    }
+    else if (count <= 3 ) {
+      track.style.transform = "translate(0, -50%)";
+      count = 0
+    }
   console.log(count);
 });
+
+
+
 
 
 prevBtn.addEventListener('click', function(){
