@@ -53,6 +53,7 @@ const randomBtn = document.querySelector('.random-btn');
 const one = document.getElementById('one');
 const two = document.getElementById('two');
 const three = document.getElementById('three');
+const four = document.getElementById('four');
 
 
 
@@ -102,109 +103,20 @@ ${reviews[3].text}
 `
 
 
-// show next person
 window.addEventListener("DOMContentLoaded", function () {
-count = 0;
 
- nextBtn.addEventListener('click', function(){
+  let count = 0
 
-if (count <= 0 ) {
-  clickOne();
-  count++;
+nextBtn.addEventListener('click', function(){
+  count++
   console.log(count);
-}
-else if (count <= 1 ) {
-  clickTwo();
-  count++;
-  console.log(count);
-}
-else if (count <= 2 ) {
-  clickThree();
-  count++;
-  console.log(count);
-}
-else if (count <= 3 ) {
-  clickFour();
-  count = 0;
-  console.log(count);
-}
 });
-
-// functions on forward click
-function clickOne() {
-one.classList.add('hide');
-two.classList.remove('hide');
-}
-function clickTwo() {
-two.classList.add('hide');
-three.classList.remove('hide');
-}
-function clickThree() {
-three.classList.add('hide');
-two.classList.add('remove');
-four.classList.remove('hide');
-}
-
-function clickFour() {
-console.log('four has been called');
-four.classList.add('hide');
-one.classList.add('hide');
-one.classList.remove('hide');
-}
-
 
 
 prevBtn.addEventListener('click', function(){
-if (count <= 0 ) {
-  reverseOne();
-  count = 3;
+  count--
   console.log(count);
-}
-else if (count <= 1 ) {
-  reverseTwo();
-  count--;
-  console.log(count);
-}
-else if (count <= 2 ) {
-  reverseThree();
-  count--;
-  console.log(count);
-}
-else if (count <= 3 ) {
-  reverseFour();
-  count--;
-  console.log(count);
-}
-});
 });
 
-// functions on reverse click
-function reverseOne() {
-one.classList.add('hide');
-four.classList.remove('hide');
-}
-function reverseTwo() {
-two.classList.add('hide');
-one.classList.remove('hide');
-}
-function reverseThree() {
-three.classList.add('hide');
-two.classList.remove('hide');
-}
 
-function reverseFour() {
-console.log('four has been called');
-four.classList.add('hide');
-three.classList.remove('hide');
-}
-
-
-
-
-// random reviewer
-randomBtn.addEventListener('click', function(){
-  const numbers = [0, 1, 2, 3]
-  const randomNumber = Math.floor(Math.random() * numbers.length);
-  console.log(randomNumber);
-  showPerson(randomNumber);
-})
+});

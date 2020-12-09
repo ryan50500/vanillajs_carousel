@@ -176,18 +176,20 @@ main {
   margin-right: auto;
 }
 .container {
-  width: 80vw;
-  max-width: var(--fixed-width);
+  /* width: 80vw; */
+  /* max-width: var(--fixed-width); */
 }
 .review {
   background: var(--clr-white);
-  padding: 45%;
+  padding: 2%;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   text-align: center;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
+  width: 60vw;
+  height: 500px;
 }
 .review:hover {
   box-shadow: var(--dark-shadow);
@@ -271,8 +273,8 @@ main {
   border-color: var(--clr-primary-5);
   cursor: pointer;
   font-size: 16px;
-  position: absolute;
-  bottom: 5%;
+  display: block;
+  position: relative;
   left: 50%;
   transform: translate(-50%,0);
 }
@@ -284,39 +286,25 @@ main {
 
 
 /* styles for testing */
+
 .be_absolute {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  transition: all 1s ease;
+  width: 60vw;
+  padding: 0 4%;
 }
 
 .button-container {
+  text-align: center;
   position: absolute;
-  bottom: 13%;
+  bottom: 5%;
   left: 50%;
-  transform: translate(-50%, -1%);
+  transform: translate(-50%, 0);
 }
 
-/* div#two {
-  transform: translate(100%, -50%);
-}
-
-div#three {
-  transform: translate(100%, -50%);
-}
-
-div#four {
-  transform: translate(100%, -50%);
-} */
-
-.hide {
-  transform: translate(100%, -50%) !important;
-  transition: all 1s ease;
-}
-
-.reverse_hide {
-  transform: translate(-200%, -50%) !important;
-  transition: all 1s ease;
+.track {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 42%;
+  left: 0;
+  transform: translate(0, -50%);
 }
