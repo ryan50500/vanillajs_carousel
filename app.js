@@ -103,7 +103,7 @@ ${reviews[3].text}
 
 window.addEventListener("DOMContentLoaded", function () {
 
-  count = 0
+  let count = 0
   console.log(count);
 
   const eachPerson = document.querySelectorAll('.be_absolute');
@@ -131,13 +131,42 @@ nextBtn.addEventListener('click', function(){
 });
 
 
-
-
-
 prevBtn.addEventListener('click', function(){
-  count--
+  if (count <= 0 ) {
+    track.style.transform = "translate(-75%, -50%)";
+    count = 3
+  }
+  else if (count <= 1 ) {
+    track.style.transform = "translate(0, -50%)";
+    count--
+  }
+  else if (count <= 2 ) {
+    track.style.transform = "translate(-25%, -50%)";
+    count--
+  }
+  else if (count <= 3 ) {
+    track.style.transform = "translate(-50%, -50%)";
+    count--
+  }
   console.log(count);
 });
 
+// suprise me button
+document.getElementById('random-btn').addEventListener('click', function(){
+
+  function randomReview(){
+      // getting current transform
+   let trsString = track.style.transform; //"translateX"
+   let num = trsString.slice(11, trsString.length - 8);
+  // num = parseInt(num);
+    let percentageArray = [0, 25, 50, 75];
+    let randomPercentage = percentageArray[Math.floor(Math.random()*percentageArray.length)];
+    track.style.transform = `translate(-${randomPercentage}%, -50%)`;
+    console.log(randomPercentage);
+};
+
+randomReview();
+
+});
 
 });

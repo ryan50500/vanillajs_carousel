@@ -187,7 +187,7 @@ main {
   transition: var(--transition);
   text-align: center;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 60vw;
   height: 500px;
 }
@@ -307,4 +307,5 @@ main {
   top: 42%;
   left: 0;
   transform: translate(0, -50%);
+  transition: all 0.7s ease;
 }
