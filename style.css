@@ -309,3 +309,18 @@ main {
   transform: translate(0, -50%);
   transition: all 0.7s ease;
 }
+
+/* mobile */
+@media (max-width: 767px) {
+.container {
+  width: 90vw;
+}
+.review {
+  width: 90vw;
+  /* height: 500px; */
+}
+.be_absolute {
+  width: 90vw;
+  padding: 0 2%;
+}
+}

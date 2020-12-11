@@ -157,8 +157,6 @@ document.getElementById('random-btn').addEventListener('click', function(){
   function randomReview(){
       // getting current transform
    let trsString = track.style.transform; //"translateX"
-   let num = trsString.slice(11, trsString.length - 8);
-  // num = parseInt(num);
     let percentageArray = [0, 25, 50, 75];
     let randomPercentage = percentageArray[Math.floor(Math.random()*percentageArray.length)];
     track.style.transform = `translate(-${randomPercentage}%, -50%)`;
